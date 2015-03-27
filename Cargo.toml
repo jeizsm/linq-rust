@@ -1,0 +1,5 @@
+[package]
+
+name = "linq-rust"
+version = "0.0.1"
+authors = ["Marat Safin <m.safin@softeam.co>"]
