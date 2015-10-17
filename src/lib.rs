@@ -1,8 +1,8 @@
 macro_rules! query {
-  (from $range_variable:ident; in $data_source:ident; select $select_expr:expr;) =>
-    { $data_source.map(|$range_variable| $select_expr) };
-  (from $range_variable:ident; in $data_source:ident; $(where $where_expr:expr;)* select $select_expr:expr;) =>
-    { $data_source.filter(|&$range_variable| (true $(&& $where_expr)*) ).map(|$range_variable| $select_expr) };
+    (from $range_variable:ident; in $data_source:ident; select $select_expr:expr;) =>
+        { $data_source.map(|$range_variable| $select_expr) };
+    (from $range_variable:ident; in $data_source:ident; $(where $where_expr:expr;)* select $select_expr:expr;) =>
+        { $data_source.filter(|&$range_variable| (true $(&& $where_expr)*) ).map(|$range_variable| $select_expr) };
 }
 
 #[cfg(test)]
